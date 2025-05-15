@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - DevFolio Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- 📌 Custom Dark Style for Publication Filters -->
+  <style>
+    .publication-filters {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto 30px auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .publication-filters li {
+      cursor: pointer;
+      padding: 10px 20px;
+      background: #222;
+      color: #aaa;
+      border: 1px solid #444;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .publication-filters li:hover {
+      background: #444;
+      color: #fff;
+    }
+
+    .publication-filters .filter-active {
+      background: #0d6efd;
+      color: #fff;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const isoContainer = document.querySelector('.isotope-container');
+    if (isoContainer) {
+      const iso = new Isotope(isoContainer, {
+        itemSelector: '.publication-item',
+        layoutMode: 'fitRows'
+      });
+
+      const filters = document.querySelectorAll('.publication-filters li');
+      filters.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filters.forEach(el => el.classList.remove('filter-active'));
+          btn.classList.add('filter-active');
+          const filterValue = btn.getAttribute('data-filter');
+          iso.arrange({ filter: filterValue });
+        });
+      });
+    }
+  });
+</script>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">AI4ST</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home<br></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Research</a></li>
+          <li><a href="#publication">Publications</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/main-img.jpg" alt="" data-aos="fade-in">
+
+      <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+        <h2> This is Jaewoong Choi</h2>
+        <p><span class="typed" data-typed-items="Researcher, Scientist, Developer, Professor, Innovator"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-md-6">
+
+            <div class="row justify-content-between gy-4">
+              <div class="col-lg-5">
+                <img src="assets/img/prof-img.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-7 about-info">
+                <p><strong>Name: </strong> <span>Jaewoong Choi</span></p>
+                <p><strong>Title: </strong> <span>Post-doctoral Research Fellow</span></p>
+                <p><strong>Email: </strong> <span>jwoongchoi407@gmail.com</span></p>
+                <p><strong>Affiliation: </strong> <span>Department of Public Administration, Korea University</span></p>
+                <p><strong>Google Scholar: </strong> <span><a href="https://scholar.google.com/citations?user=X8CQDfsAAAAJ&hl=en" target="_blank">Here</a></span>
+                </p>
+              </div>
+            </div>
+
+            <div class="skills-content skills-animation">
+
+              <h5>Skills</h5>
+
+              <div class="progress">
+                <span class="skill"><span>Python</span> <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>PyTorch</span> <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>Java</span> <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>C#</span> <i class="val">70%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>SQL</span> <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="about-me">
+              <h4>About me</h4>
+              <p>
+                This is <b>Jaewoong Choi</b>. I received my Ph.D. in Industrial Engineering from Konkuk University in 2022, under the supervision of Prof. Janghyeok Yoon. My dissertation is about <b>the development of a machine learning(ML)–enabled technology intelligence system</b>. In addition to this work, I conducted data-driven business intelligence studies using various data (e.g., patents, trademarks, social media, online communities, news articles, and research proposals).
+              </p>
+              <p>
+                After graduation, I served as a commisioned researcher at the <b>Computational Science Research Center of the Korea Institute of Science and Technology (KIST)</b>, fulfilling my alternative military service. My role was similar to that of an AI engineer, where I applied natural language processing (NLP) and large language models (LLMs) to extract scientific knowledge entities from large volumes of literature.
+              </p>
+              <p>
+                Currently, I am working in the <b>Department of Public Administration at Korea University</b> under the supervision of Prof. Changyong Lee. My research interests include data-driven approaches to AI transformation and S&T innovation policy.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Ph.D in Industrial Engineering</h4>
+              <h5>2018 - 2022</h5>
+              <h5>Advisor: Prof. Janghyeok Yoon</h5>
+              <h5>Lab: Business Intelligence & Data Analytics Laboratory</h5>
+              <h5>Thesis: A knowledge profiling approach to technology opportunity mining for R&D planning</h5>
+              <p><em>Department of Industrial Engineering, Konkuk University, Seoul, South Korea</em></p>
+              <p>Graduated Summa Cum Laude with the highest GPA and research performance among the 2022 graduates of Konkuk University </p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Bachelor in Industrial Engineering</h4>
+              <h5>2014 - 2018</h5>
+              <h5>Advisor: Prof. Janghyeok Yoon</h5>
+              <p><em>Department of Industrial Engineering, Konkuk University, Seoul, South Korea</em></p>
+              <p>Awarded a merit-based scholarship for academic excellence in the first semester of 2016 </p>
+            </div><!-- Edn Resume Item -->
+            <h3 class="resume-title">Service</h3>
+            <div class="resume-item">
+              <h4>Peer reviewer</h4>
+
+              <h5>Journal of Engineering and Technology Management, Journal of Informetrics, Scientometrics, Technovation, IEEE Transactions on Engineering Management, Technological Forecasting and Social Change </h5>
+              <h5><b>Experts Systems with Applications</b>, Computers & Industrial Engineering, Computers in Industry, Information Processing & Management</h5>  
+              
+
+            </div><!-- Edn Resume Item -->
+            <div class="resume-item">
+              <h4>Technical advice</h4>
+
+              <h5>Korea Insitute of Science and Technology Information </h5>
+              <h5>Korea Insitute of Science and Technology </h5>
+              <h5>Korea Insitute for Industrial Economics & Trade </h5>
+
+              
+
+            </div><!-- Edn Resume Item -->
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Post-doctoral Research Fellow</h4>
+              <h5>2025.03 - Present</h5>
+              <p><em>Department of Public Administration, Korea University, Seoul, South Korea </em></p>
+              <ul>
+                <li>Working for AI transformation and S&T innovation policy</li>
+
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Commisioned Researcher</h4>
+              <h5>2022 - 2024</h5>
+              <p><em>Computational Science Research Center, KIST, Seoul, South Korea</em></p>
+              <ul>
+                <li>Developing NLP-based protocols for materials science trend analysis</li>
+                <li>Developing LLM-based materials language processing toolkits</li>
+                <li>Developing information extraction models in energy materials fields such as catalyst, and batteries</li>
+                
+              </ul>
+
+            </div><!-- Edn Resume Item -->
+            <div class="resume-item">
+              <h4>Teaching Assitant</h4>
+              <h5>2018-2021</h5>
+              <p><em>Department of Industrial Engineering, Konkuk University, Seoul, South Korea</em></p>
+              <ul>
+                <li>Providng lectures on for undergraduate lectures (e.g., Data Analytics, Technology Management, Enterprise Database Modelling, and Computer Programming 1,2)  </li>
+                
+              </ul>
+
+            </div><!-- Edn Resume Item -->
+            <div class="resume-item">
+              <h4>Lecturer</h4>
+              <h5>2019</h5>
+              <p><em>Konkuk University, Seoul, South Korea</em></p>
+              <ul>
+                <li>Providng lectures on C# programming for undergraduates as a program of 2019 Winter Vacation Engineering Software Training, funded by Engineering Education Innovation Task Force </li>
+                
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Research Intern</h4>
+              <h5>2016 - 2017</h5>
+              <p><em>Technology management laboratory, Konkuk University, Seoul, South Korea</em></p>
+              <ul>
+                <li>Developing ML–enabled technology intelligence models</li>
+               
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Research Interests</h2>
+        <p>are as follows, but not limited to</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-activity"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Management of Technology</h3>
+              </a>
+              <p>Providing technology intelligence such as technology opportunity discovery, technology valuation and technology forecasting from patent data</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Science and Technology Innovation Policy</h3>
+              </a>
+              <p>Providing AI transformation pathways for science and technology innovation, focusing on energy and environmental science fields</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-easel"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Business Intelligence</h3>
+              </a>
+              <p>Providing business managerial insights from social media, trademarks, online communities, online product reviews and so on</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-bounding-box-circles"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Applied Machine Learning</h3>
+              </a>
+              <p>Applications of ML models for classification, regression, similarity learning and so on</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-calendar4-week"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Natural Language Processing</h3>
+              </a>
+              <p>Application of NLP for information extraction, text classification and knowledge graphs</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-chat-square-text"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Large Language Models</h3>
+              </a>
+              <p>Developing LLM-based information extraction toolkits and agentic environment for policy simulation</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section accent-background">
+
+      <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
+
+      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="17" data-purecounter-duration="0" class="purecounter">17</span>
+              <p>International Publications</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="11" data-purecounter-duration="0" class="purecounter">11</span>
+              <p>H-index</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="17" data-purecounter-duration="0" class="purecounter">17</span>
+              <p>Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="0" class="purecounter">6</span>
+              <p>Intellectual Property</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+
+    <!-- Publication Section -->
+    <section id="publication" class="publication section">
+      
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Publications</h2>
+        
+
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <!-- Isotope Layout Container -->
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <!-- Filters -->
+          <ul class="publication-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-tba">To Be Announced</li>
+            <li data-filter=".filter-inter">International Journal</li>
+            <li data-filter=".filter-dome">Domestic Journal</li>
+            <li data-filter=".filter-ip">Intellectual Property</li>
+          </ul><!-- End Publication Filters -->
+
+          <!-- Items Grid -->
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-tba" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">NEON as a navigator of energy open innovation ecosystems</h4>
+                    <p class="author">Jaemin Chung, Janghyeok Yoon*, <b>Jaewoong Choi*</b></p>
+                    <p class="date">2025+</p>
+                    <p class="description">(SSCI) Journal of Innovation & Knowledge, in 2nd revision</p>
+                    <div class="link">
+                      <a href="" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <!-- Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-tba" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Exploring intra and inter-organizational collaboration opportunities across a technological knowledge ecosystem</h4>
+                    <p class="author">Jaemin Chung, <b>Jaewoong Choi</b>, Janghyeok Yoon*</p>
+                    <p class="date">2025+</p>
+                    <p class="description">(SSCI) Technological Forecasting & Social Change, Submitted</p>
+                    <div class="link">
+                      <a href="" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <!-- Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-tba" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Dynamic technology impact analysis: A multi-task learning approach to patent citation prediction</h4>
+                    <p class="author">Yeongjin Seol, <b>Jaewoong Choi</b>, Seunghyun Lee, Janghyeok Yoon*</p>
+                    <p class="date">2025+</p>
+                    <p class="description">(SCIE) Computers & Industrial Engineering, in 1st revision</p>
+                    <div class="link">
+                      <a href="" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+
+            <!-- Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-tba" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Harnessing language models for computational literature review of emerging AI topics</h4>
+                    <p class="author">Jaemin Chung, Byeongki Jeong, Young-Jae Park, Hwihun Jeong, Jiho Lee, Janghyeok Yoon*, <b>Jaewoong Choi*</b>,</p>
+                    <p class="date">2025+</p>
+                    <p class="description">(SSCI) Information Processing & Management, in 1st revision</p>
+                    <div class="link">
+                      <a href="" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <!-- Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-tba" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Exploring the potential of novel research proposals as signals of successful national R&D: A case study on energy and resource sector in South Korea</h4>
+                    <p class="author">Jaemin Chung,  <b>Jaewoong Choi*</b></p>
+                    <p class="date">2025+</p>
+                    <p class="description">(SSCI) Journal of Informetrics, Under review</p>
+                    <div class="link">
+                      <a href="" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+
+
+
+            <!-- Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Building an End-to-End Battery Recipe Knowledge Base via Transformer-Based Text Mining</h4>
+                    <p class="author">Daeun Lee, Hiroshi Mizuseki, <b>Jaewoong Choi*</b>, Byungju Lee*</p>
+                    <p class="date">2025+</p>
+                    <p class="description">(ESCI) Communications Materials, Accepted</p>
+                    <div class="link">
+                      <a href="" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Early screening of potential breakthrough technologies with enhanced interpretability: A patent-specific hierarchical attention network model</h4>
+                    <p class="author"><b>Jaewoong Choi</b>, Janghyeok Yoon, Changyong Lee*</p>
+                    <p class="date">2025.04</p>
+                    <p class="description">(SCIE) Computers & Industrial Engineering, 203, 111034. <b>JCR Top 15% for Industrial Engineering</b></p>
+                    <div class="link">
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0360835225001809" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">MaTableGPT: GPT-Based Table Data Extractor from Materials Science Literature</h4>
+                    <p class="author">Gyung Hoon Yi†, Jiwoo Choi†, Hyungyun Song†, Olivia Miano, <b>Jaewoong Choi</b>, Kihoon Bang, Byungju Lee, Seok Su Sohn, David Buttler, Anna Hiszpanski*, Sang Soo Han*, Donghun Kim* </p>
+                    <p class="date">2025.02</p>
+                    <p class="description">(SCIE) Advanced Science, 2408221. Selected as Back Cover. <b>JCR Top 6% for Materials Science, Multidisciplinary</b></p>
+                    <div class="link">
+                      <a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202408221" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Accelerating materials language processing with large language models</h4>
+                    <p class="author"><b>Jaewoong Choi</b>,  Byungju Lee*</p>
+                    <p class="date">2024.02</p>
+                    <p class="description">(ESCI) Communications Materials 5 (1), 13</p>
+                    <div class="link">
+                      <a href="https://www.nature.com/articles/s43246-024-00449-9" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Quantitative Topic Analysis of Materials Science Literature Using Natural Language Processing</h4>
+                    <p class="author"><b>Jaewoong Choi</b>, Byungju Lee*</p>
+                    <p class="date">2024.01</p>
+                    <p class="description"> (SCIE) ACS Applied Materials & Interfaces 16 (2), 1957–1968. Selected as Front Cover. <b>JCR Top 15% for Materials Science, Multidisciplinary</b></p>
+                    <div class="link">
+                      <a href="https://pubs.acs.org/doi/abs/10.1021/acsami.3c12301" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Towards firm-specific technology opportunities: A rule-based machine learning approach to technology portfolio analysis</h4>
+                    <p class="author">Youngjin Seol, Seunghyun Lee, Cheol-Han Kim, Janghyeok Yoon*, <b>Jaewoong Choi*</b></p>
+                    <p class="date">2023.11</p>
+                    <p class="description">(SSCI) Journal of Informetrics 17 (4), 101464</p>
+                    <div class="link">
+                      <a href="https://www.sciencedirect.com/science/article/pii/S1751157723000895" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Deep Learning of Electrochemical CO2 Conversion Literature Reveals Research Trends and Directions</h4>
+                    <p class="author">Jiwoo Choi†, Kihoon Bang†, Suji Jang, <b>Jaewoong Choi</b>, Juanita Ordonez, David Buttler, Anna Hiszpanski, Thomas Yong-Jin Han, Seok Su Sohn, Byungju Lee, Kwang-Ryeol Lee, Sang Soo Han*, Donghun Kim*</p>
+                    <p class="date">2023.07</p>
+                    <p class="description">(SCIE) Journal of Materials Chemistry A 33 (11), 17628-17643.<b>JCR Top 11% for Materials Science, Multidisciplinary</b></p>
+                    <div class="link">
+                      <a href="https://pubs.rsc.org/en/content/articlelanding/2023/ta/d3ta02780e/unauth" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Exploring a technology ecology for technology opportunity discovery: A link prediction approach using heterogeneous knowledge graphs</h4>
+                    <p class="author"><b>Jaewoong Choi</b>, Changyong Lee, Janghyeok Yoon*</p>
+                    <p class="date">2023.01</p>
+                    <p class="description">(SSCI) Technological Forecasting and Social Change 186 (B), 122161. <b>JCR Top 2% for Business</b></p>
+                    <div class="link">
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0040162522006825" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">A two-stage deep learning-based system for patent citation recommendation</h4>
+                    <p class="author"><b>Jaewoong Choi</b>, Jiho Lee, Janghyeok Yoon, Sion Jang, Jaeyoung Kim, Sungchul Choi*</p>
+                    <p class="date">2022.07</p>
+                    <p class="description">(SSCI) Scientometrics 127 (11), 6615-6636</p>
+                    <div class="link">
+                      <a href="https://link.springer.com/article/10.1007/s11192-022-04301-0" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Identification of emerging business areas for business opportunity analysis: An approach based on language model and local outlier factor</h4>
+                    <p class="author"><b>Jaewoong Choi</b>, Byeongki Jeong, Janghyeok Yoon*</p>
+                    <p class="date">2022.09</p>
+                    <p class="description">(SCIE) Computers in Industry 140, 103677. <b>JCR Top 4% for Computer Science, Indisciplinary Applications</b></p>
+                    <div class="link">
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0166361522000744" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Measuring knowledge exploration distance at the patent level: Application of network embedding and citation analysis</h4>
+                    <p class="author"><b>Jaewoong Choi</b>, Janghyeok Yoon*</p>
+                    <p class="date">2022.05</p>
+                    <p class="description">(SSCI) Journal of Informetrics 16 (2), 101286</p>
+                    <div class="link">
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S1751157722000384" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Anticipating promising services under technology capability for new product-service system strategies: An integrated use of patents and trademarks</h4>
+                    <p class="author"><b>Jaewoong Choi</b>, Janghyeok Yoon*</p>
+                    <p class="date">2021.12</p>
+                    <p class="description">(SCIE) Computers in Industry 133, 103542. <b>JCR Top 4% for Computer Science, Indisciplinary Applications</b></p>
+                    <div class="link">
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S1751157722000384" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Social media analytics and business intelligence research: A systematic review</h4>
+                    <p class="author"><b>Jaewoong Choi</b>, Janghyeok Yoon*, Jaemin Chung, Byoung-Youl Coh, Jae-Min Lee</p>
+                    <p class="date">2020.11</p>
+                    <p class="description">(SSCI) Information Processing & Management 57 (6), 102279. <b>JCR Top 5% for Information Science & Library Science</b></p>
+                    <div class="link">
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S030645731931057X" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Predicting product development directions for new product planning using patent classification-based link prediction</h4>
+                    <p class="author">Seunghyun Oh, <b>Jaewoong Choi</b>, Namuk Ko, Janghyeok Yoon*</p>
+                    <p class="date">2020.11</p>
+                    <p class="description">(SSCI) Scientometrics 125, 1833-1876</b></p>
+                    <div class="link">
+                      <a href="https://link.springer.com/article/10.1007/s11192-020-03709-w" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">A novel approach to evaluating the business potential of intellectual properties: A machine learning-based predictive analysis of patent lifetime</h4>
+                    <p class="author"><b>Jaewoong Choi</b>, Byeongki Jeong, Janghyeok Yoon*, Byoung-Youl Coh, Jae-Min Lee/p>
+                    <p class="date">2020.07</p>
+                    <p class="description">(SCIE) Computers & Industrial Engineering 145, 106544. <b>JCR Top 15% for Industrial Engineering</b></p>
+                    <div class="link">
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0360835220302783" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Identification of time-evolving product opportunities via social media mining</h4>
+                    <p class="author"><b>Jaewoong Choi</b>,  Seunghyun Oh, Janghyeok Yoon*, Jae-Min Lee, Byoung-Youl Coh</p>
+                    <p class="date">2020.04</p>
+                    <p class="description">(SSCI) Technological Forecasting and Social Change 156, 120045. <b>JCR Top 2% for Business</b></p>
+                    <div class="link">
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0040162519321043" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-inter" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">Technology opportunity discovery under the dynamic change of focus technology fields: Application of sequential pattern mining to patent classifications</h4>
+                    <p class="author"><b>Jaewoong Choi</b>, Byeongki Jeong, Janghyeok Yoon*</p>
+                    <p class="date">2019.11</p>
+                    <p class="description">(SSCI) Technological Forecasting and Social Change 148, 119737. <b>JCR Top 2% for Business</b></p>
+                    <div class="link">
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0040162518312745" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+
+
+
+
+
+
+            <div class="col-lg-12 publication-item isotope-item filter-dome" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">언어모델과 공공부문 행정혁신: 개념, 접근법 및 고려 사항</h4>
+                    <p class="author">박정원†, 전대성†, 이규민†, <b>최재웅†</b>, 이창용*</p>
+                    <p class="date">2024.07 </p>
+                    <p class="description">(KCI) 정부학연구, 30 (1), 35-88.</p>
+                    <div class="link">
+                      <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003080051" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-dome" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">제품 출시 초기의 고객 불만 모니터링을 위한 소셜미디어 마이닝 접근법</h4>
+                    <p class="author">이승현, <b>최재웅</b>, 윤장혁*</p>
+                    <p class="date">2021.06 </p>
+                    <p class="description">(KCI) 대한산업공학회지, 47 (3), 289-301 </p>
+                    <div class="link">
+                      <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10566184" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-dome" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">특허의 토픽 진화분석을 통한 에너지 하베스팅 기술 발전 경로 추적</h4>
+                    <p class="author">김유성, <b>최재웅</b>, 윤장혁*</p>
+                    <p class="date">2021.03 </p>
+                    <p class="description">(KCI) 지식재산연구, 16(1), 169-200, 2020년도 지식재산공모전 장려 수상  </p>
+                    <div class="link">
+                      <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002701610" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+
+            <div class="col-lg-12 publication-item isotope-item filter-dome" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">상표데이터기반 비즈니스 인텔리전스: 활용사례 및 연구이슈</h4>
+                    <p class="author">윤장혁*, 고남욱, 정병기 <b>최재웅</b></p>
+                    <p class="date">2019.08 </p>
+                    <p class="description">(KCI) 대한산업공학회지, 45 (4) </p>
+                    <div class="link">
+                      <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002491818" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+
+            <div class="col-lg-12 publication-item isotope-item filter-dome" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">제품혁신수준 분석을 위한 특허정보 기반 지표 개발</h4>
+                    <p class="author">오승현, 고남욱, 정병기, <b>최재웅</b>, 윤장혁*</p>
+                    <p class="date">2019.02 </p>
+                    <p class="description">(KCI) 대한산업공학회지, 45 (1)  </p>
+                    <div class="link">
+                      <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002436630" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+
+            <div class="col-lg-12 publication-item isotope-item filter-dome" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">인문사회 과학기술 분야 연구의 학제적 동향 분석: 토픽 모델링과 네트워크 분석의 활용</h4>
+                    <p class="author"> <b>최재웅</b>, 장재혁, 김대환, 윤장혁*</p>
+                    <p class="date">2019.01 </p>
+                    <p class="description">(KCI) 산업경영시스템학회지, 42 (1), 74-86  </p>
+                    <div class="link">
+                      <a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002450512" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+
+            <div class="col-lg-12 publication-item isotope-item filter-ip" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">지식 그래프 모델링을 통한 오픈 이노베이션 생태계 분석 방법</h4>
+                    <p class="author">윤장혁, 정재민, <b>최재웅</b></p>
+                    <p class="description">대한민국특허청 출원번호 10-2024-0177371  (2024)</p>
+
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+
+            <div class="col-lg-12 publication-item isotope-item filter-ip" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">자연어처리 기반 연구개발 컨설팅 시스템 및 이의 동작 방법</h4>
+                    <p class="author"><b>최재웅</b></p>, 이병주
+                    <p class="description">대한민국특허청 출원번호 10-2023-0,092,570. (2023)</p>
+
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+
+            <div class="col-lg-12 publication-item isotope-item filter-ip" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">제약기술 생태계 기반의 약물 재창출을 위한 분석 장치 및 방법</h4>
+                    <p class="author">윤장혁, 제갈용승, <b>최재웅</b>, 이지호 </p>
+                    <p class="description">대한민국특허청 출원번호 10-2023-0092221  (2023)</p>
+
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+
+            <div class="col-lg-12 publication-item isotope-item filter-ip" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">지식 그래프 모델링을 통한 오픈 이노베이션 생태계 분석 방법</h4>
+                    <p class="author">윤장혁, 정재민, <b>최재웅</b></p>
+                    <p class="description">대한민국특허청 출원번호 10-2024-0177371  (2024)</p>
+
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+
+
+            <div class="col-lg-12 publication-item isotope-item filter-ip" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">자연어처리 기반 R&D 컨설팅 프로그램</h4>
+                    <p class="author"><b>최재웅</b>, 이병주</p>
+                    <p class="description">한국저작권 제C-2023-007702호 (2023)</p>
+
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+
+
+            <div class="col-lg-12 publication-item isotope-item filter-ip" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">기술 기회 발굴 장치 및 방법</h4>
+                    <p class="author">윤장혁, <b>최재웅</b>, 정병기</p>
+                    <p class="description">대한민국특허청 등록번호 10-2,178,702 (2020)</p>
+
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+
+            <div class="col-lg-12 publication-item isotope-item filter-ip" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">특허수명예측장치 및 그 동작 방법</h4>
+                    <p class="author">윤장혁, <b>최재웅</b>, 정병기, 이재민, 고병열, 권오진</p>
+                    <p class="description">대한민국특허청 등록번호 101,877,235.(2018)</p>
+
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+
+
+            <!-- 여기에 추가 아이템들 .filter-product 등도 동일 구조로 추가하면 됩니다 -->
+
+          </div><!-- End isotope-container -->
+
+        </div><!-- End isotope-layout -->
+
+      </div><!-- End Container -->
+
+    </section><!-- /Publication Section -->
+
+
+
+    </section>
+    <section id="project" class="project">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Projects</h2>
+          <!--<p>Section description sentences</p>-->
+        </div>
+
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> Development of AI-based data collection and utilization technologies for energy and environmental materials</h4>
+          <ul>
+            <li> Funded by NRF Korea  </li>
+            <li> Lead by Computational Science Research Center, KIST  </li>
+            <li> Duration: 2023-2024 </li>
+            
+          </ul>
+        </div>
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> 기계학습 기반 배터리 문헌 수집 및 처리</h4>
+          <ul>
+            <li> Funded by KIST  </li>
+            <li> Lead by Computational Science Research Center, KIST  </li>
+            <li> Duration: 2022-2023 </li>
+            
+          </ul>
+        </div>
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> Development of machine learning potential and web platform for solid-state electrolyte simulation</h4>
+          <ul>
+            <li> Funded by KIST  </li>
+            <li> Lead by Computational Science Research Center, KIST  </li>
+            <li> Duration: 2023 </li>
+            
+          </ul>
+        </div>
+
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> Development of materials for advanced secondary batteries using machine-learning assisted simulation</h4>
+          <ul>
+            <li> Funded by POSCO Holdings  </li>
+            <li> Lead by Computational Science Research Center, KIST  </li>
+            <li> Duration: 2022-2023 </li>
+            
+          </ul>
+        </div>
+
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> 이종 데이터의 지능적 연결 및 기술 솔루션 생성모형을 통한 소셜 이슈 대응 비즈니스 발굴 체계</h4>
+          <ul>
+            <li> Funded by NRF Korea </li>
+            <li> Lead by Prof. Janghyeok Yoon Group at Konkuk University  </li>
+            <li> Duration: 2021 </li>
+            
+          </ul>
+        </div>
+
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> 소셜-기술 데이터 애널리틱스 기반의 비즈니스 발굴-평가-운영 체계</h4>
+          <ul>
+            <li> Funded by NRF Korea </li>
+            <li> Lead by Prof. Janghyeok Yoon Group at Konkuk University  </li>
+            <li> Duration: 2018-2021 </li>
+            
+          </ul>
+        </div>
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> 기술키워드를 활용한 국가과학기술표준분류 신설분류명의 정부 R&D 규모 측정 방안 설계</h4>
+          <ul>
+            <li> Funded by KISTEP </li>
+            <li> Lead by Prof. Janghyeok Yoon Group at Konkuk University  </li>
+            <li> Duration: 2021 </li>
+            
+          </ul>
+        </div>
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> 과학기술 기계학습 데이터 구축 파급효과 분석 및 활용방안 연구</h4>
+          <ul>
+            <li> Funded by KISTI </li>
+            <li> Lead by Prof. Janghyeok Yoon Group at Konkuk University  </li>
+            <li> Duration: 2020</li>
+            
+          </ul>
+        </div>
+
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> 빅데이터 등을 활용한 평가항목 객관화 체계 구축</h4>
+          <ul>
+            <li> Funded by 기술보증기금 </li>
+            <li> Lead by Prof. Janghyeok Yoon Group at Konkuk University  </li>
+            <li> Duration: 2019</li>
+            
+          </ul>
+        </div>
+
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> 지적측량 업무량 변동예측 모델 개발을 위한 LX 내외부 데이터 처리 및 분석 방안 연구</h4>
+          <ul>
+            <li> Funded by 한국국토정보공사 </li>
+            <li> Lead by Prof. Janghyeok Yoon Group at Konkuk University  </li>
+            <li> Duration: 2018</li>
+            
+          </ul>
+        </div>
+
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> 빅데이터 등을 활용한 KTRS 평가지표 객관화</h4>
+          <ul>
+            <li> Funded by 기술보증기금 </li>
+            <li> Lead by Prof. Janghyeok Yoon Group at Konkuk University  </li>
+            <li> Duration: 2018</li>
+            
+          </ul>
+        </div>
+
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> 지식재산(IP) 가치평가 지원방안 연구</h4>
+          <ul>
+            <li> Funded by 기술보증기금 </li>
+            <li> Lead by Prof. Janghyeok Yoon Group at Konkuk University  </li>
+            <li> Duration: 2018</li>
+            
+          </ul>
+        </div>
+
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> 근미래이슈 탐지를 위한 오픈데이터 유형탐색 및 분석모델 연구</h4>
+          <ul>
+            <li> Funded by KISTI </li>
+            <li> Lead by Prof. Janghyeok Yoon Group at Konkuk University  </li>
+            <li> Duration: 2018</li>
+            
+          </ul>
+        </div>
+ 
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> 기술지능 기반의 차세대 제품-서비스 시스템 개발 접근 방법</h4>
+          <ul>
+            <li> Funded by NRF Korea </li>
+            <li> Lead by Prof. Janghyeok Yoon Group at Konkuk University  </li>
+            <li> Duration: 2015-2018</li>
+            
+          </ul>
+        </div>
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> 기술역량기반 응용기술 후보 및 주요개발자 발굴 및 추천 시스템</h4>
+          <ul>
+            <li> Funded by 과학기술일자리진흥원 </li>
+            <li> Lead by Prof. Janghyeok Yoon Group at Konkuk University  </li>
+            <li> Duration: 2017-2018</li>
+            
+          </ul>
+        </div>
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> 제품혁신 지표 및 분석모형 개발</h4>
+          <ul>
+            <li> Funded by KISTI </li>
+            <li> Lead by Prof. Janghyeok Yoon Group at Konkuk University  </li>
+            <li> Duration: 2017</li>
+            
+          </ul>
+        </div>
+        
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> 특허자동평가 시스템 고도화 방안 연구</h4>
+          <ul>
+            <li> Funded by 기술보증기금 </li>
+            <li> Lead by Prof. Janghyeok Yoon Group at Konkuk University  </li>
+            <li> Duration: 2017</li>
+            
+          </ul>
+        </div>
+        
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title"> NRF 보유 연구제안서의 분석을 통한 국내 R&D 동향 분석</h4>
+          <ul>
+            <li> Funded by NRF Korea </li>
+            <li> Lead by Prof. Janghyeok Yoon Group at Konkuk University  </li>
+            <li> Duration: 2016-2017</li>
+            
+          </ul>
+        </div>
+      </div>
+
+    </section> 
+   
+
+    
+
+    
+
+    <section id="service" class="service">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Invited talks</h2>
+          <!--<p>Section description sentences</p>-->
+        </div>
+
+        <div class="service-content"><!--data-aos="fade-up"-->
+          <h4 class="service-title">과학기술 발견을 위한 미시정보 추출 프로세스</h4>
+          <ul>
+            <li> Venue: 한국과학기술정보연구원 미래기술분석센터  </li>
+            <li> Date: 2025 May. 14 </li>
+            
+
+          </ul>
+          <h4 class="service-title">AI 기반 자연어처리를 활용한 논문 내 소재 정보 자동 추출</h4>
+          <ul>
+            <li> Venue: 한국과학기술정보연구원 미래기술분석센터 기술지능연구팀  </li>
+            <li> Date: 2025 May. 8 </li>
+
+          </ul>
+          <h4 class="service-title">거대언어모델을 통한 소재분야 정보추출 연구 트렌드 분석</h4>
+          <ul>
+            <li> Venue: 한국과학기술정보연구원 미래기술분석센터 기술지능연구팀 </li>
+            <li> Date: 2025 Feb. 4 </li>
+
+          </ul>
+          <h4 class="service-title"> 언어모델 기반 과학기술 혁신 사례</h4>
+          <ul>
+            <li> Venue: 한국과학기술정보연구원 미래기술분석센터 </li>
+            <li> Date: 2024 Apr. 5 </li>
+
+          </ul>          
+          <h4 class="service-title"> 초거대 언어모델의 이해와 활용 </h4>
+          <ul>
+            <li> Venue: 버추얼랩  </li>
+            <li> Date: 2024 Mar. 6 </li>
+
+          </ul>          
+          <h4 class="service-title"> GPT를 통한 재료과학 자연어처리 실습 </h4>
+          <ul>
+            <li> Venue: 대한금속재료학회 단기강좌 </li>
+            <li> Date: 2023 Aug. 17 </li>
+
+          </ul>    
+          <h4 class="service-title"> GPT 모델의 이해와 활용</h4>
+          <ul>
+            <li> Venue: 대한금속재료학회 단기강좌 </li>
+            <li> Date: 2023 Aug. 16 </li>
+
+          </ul>        
+          <h4 class="service-title"> Benchmarking the performance of GPT in materials language processing </h4>
+          <ul>
+            <li> Venue: 대한금속재료학회 초청강연 </li>
+            <li> Date: 2023 Oct. 26 </li>
+
+          </ul>          
+          <h4 class="service-title"> 언어모델을 이용한 상표 지정상품 텍스트 마이닝 </h4>
+          <ul>
+            <li> Venue: 산업연구원 </li>
+            <li> Date: 2023 Aug. 21 </li>
+
+          </ul>          
+          <h4 class="service-title"> Text-mined academic interests in materials science </h4>
+          <ul>
+            <li> Venue: KIST-LLNL online discussion </li>
+            <li> Date: 2023 Jan. 26</li>
+
+          </ul>          
+          <h4 class="service-title"> Accelerated Materials Language Processing enabled by GPT </h4>
+          <ul>
+            <li> Venue: KIST-LLNL online discussion  </li>
+            <li> Date: 2023 Sep. 12 </li>
+
+          </ul>          
+          <h4 class="service-title"> Accelerated Materials Language Processing enabled by GPT </h4>
+          <ul>
+            <li> Venue: KIST-LLNL offline workshop </li>
+            <li> Date: 2023 Oct. 12 </li>
+
+          </ul>          
+          
+        </div>
+
+
+      </div>
+
+         
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Open to research collaboration and technical consulting opportunities</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-5">
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Department of Public Administration, Korea University, 145 Anam-ro, Seongbuk-gu, Seoul 02841, Republic of Korea</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>ResearchGate</h3>
+                  <p>
+                    <a href="https://www.researchgate.net/profile/Jaewoong-Choi-2?ev=hdr_xprf" target="_blank">
+                      Jaewoong Choi
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>GitHub</h3>
+                  <p>
+                    <a href="https://github.com/jwchoi95" target="_blank">
+                      jwchoi95
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+          </div>
+        </div>
+
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">AI4ST</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
