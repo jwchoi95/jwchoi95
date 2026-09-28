@@ -737,6 +737,112 @@
       line-height: 1.85;
     }
 
+
+    /* Individual people profiles */
+    .person-card-actions {
+      margin-top: 22px;
+    }
+
+    .person-detail {
+      margin-top: 24px;
+      padding: 34px 0 10px;
+      border-top: 1px solid #d8dad7;
+    }
+
+    .person-photo-wrap {
+      width: 100%;
+      max-width: 260px;
+      aspect-ratio: 4 / 5;
+      background: #eceeeb;
+      overflow: hidden;
+    }
+
+    .person-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .person-photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8b9094;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .person-detail-name {
+      margin: 0 0 6px;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .person-detail-role {
+      margin: 0 0 24px;
+      color: #666c70;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .person-meta {
+      margin-bottom: 30px;
+    }
+
+    .person-meta p {
+      margin: 0;
+      padding: 10px 0;
+      border-top: 1px solid #e7e8e5;
+      color: #4f5559;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .person-meta p:last-child {
+      border-bottom: 1px solid #e7e8e5;
+    }
+
+    .person-meta strong {
+      display: inline-block;
+      min-width: 120px;
+      color: #858a8f;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .person-career-grid .detail-heading {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    .person-career-grid .resume-item {
+      padding: 0 0 20px 16px;
+    }
+
+    .person-career-grid .resume-item h4 {
+      margin-bottom: 4px;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .person-career-grid .resume-item h5 {
+      margin: 3px 0;
+      font-size: 11px;
+    }
+
+    .person-career-grid .resume-item p {
+      margin: 5px 0 0;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
     @media (max-width: 767px) {
       .people-pi {
         grid-template-columns: 1fr;
@@ -844,8 +950,12 @@
                 <span class="eyebrow">Principal Investigator</span>
                 <h3>Jaewoong Choi</h3>
                 <p class="affiliation">Assistant Professor, School of Business Administration<br>Dankook University, Yongin, South Korea</p>
+                <div class="person-card-actions">
+                  <button class="section-more" type="button" data-bs-toggle="collapse" data-bs-target="#jaewoongDetails" aria-expanded="false" aria-controls="jaewoongDetails">
+                    View details <i class="bi bi-chevron-down"></i>
+                  </button>
+                </div>
               </div>
-              <a href="https://scholar.google.com/citations?user=X8CQDfsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="preview-link">Google Scholar <i class="bi bi-arrow-up-right"></i></a>
             </div>
           </div>
 
@@ -866,61 +976,61 @@
           </div>
         </div>
 
-        <button class="section-more" type="button" data-bs-toggle="collapse" data-bs-target="#peopleDetails" aria-expanded="false" aria-controls="peopleDetails">
-          View details <i class="bi bi-chevron-down"></i>
-        </button>
-
-        <div class="collapse" id="peopleDetails">
-          <div class="detail-panel">
+        <div class="collapse" id="jaewoongDetails">
+          <div class="person-detail">
             <div class="row g-5 align-items-start">
-              <div class="col-lg-7">
-                <h3 class="detail-heading">About the Lab</h3>
-                <p>
-                  AI-ON Lab studies how artificial intelligence and machine learning enable digital transformation and reshape organizations, innovation, public policy, and society. The lab is led by Prof. Jaewoong Choi and is based in the School of Business Administration at Dankook University in Yongin, South Korea.
-                </p>
-              </div>
-              <div class="col-lg-5">
-                <h3 class="detail-heading">Principal Investigator</h3>
-                <div class="about-info">
-                  <p><strong>Position</strong>Assistant Professor, Dankook University</p>
-                  <p><strong>Field</strong>AI/ML, digital transformation, technology & innovation management</p>
-                  <p><strong>Research</strong>Business-oriented NLP, technology intelligence, policy informatics, applied machine learning</p>
+              <div class="col-lg-3 col-md-4">
+                <div class="person-photo-wrap">
+                  <img src="assets/img/jaewoong-choi.jpg" alt="Jaewoong Choi" class="person-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="person-photo-placeholder" style="display:none;">Profile photo</div>
                 </div>
               </div>
-            </div>
 
-            <div class="row mt-5 people-career-details">
-              <div class="col-lg-6">
-                <h3 class="detail-heading">Education</h3>
-                <div class="resume-item">
-                  <h4>Ph.D. in Industrial Engineering</h4>
-                  <h5>2018 – 2022</h5>
-                  <h5>Advisor: Prof. Janghyeok Yoon</h5>
-                  <p><em>Department of Industrial Engineering, Konkuk University, Seoul, South Korea</em></p>
+              <div class="col-lg-9 col-md-8">
+                <h3 class="person-detail-name">Jaewoong Choi</h3>
+                <p class="person-detail-role">Assistant Professor · School of Business Administration, Dankook University</p>
+
+                <div class="person-meta">
+                  <p><strong>Research</strong>AI/ML, digital transformation, technology &amp; innovation management</p>
+                  <p><strong>Interests</strong>Business-oriented NLP, technology intelligence, policy informatics, applied machine learning</p>
+                  <p><strong>Profile</strong><a href="https://scholar.google.com/citations?user=X8CQDfsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <i class="bi bi-arrow-up-right"></i></a></p>
                 </div>
-                <div class="resume-item">
-                  <h4>Bachelor in Industrial Engineering</h4>
-                  <h5>2014 – 2018</h5>
-                  <h5>Advisor: Prof. Janghyeok Yoon</h5>
-                  <p><em>Department of Industrial Engineering, Konkuk University, Seoul, South Korea</em></p>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <h3 class="detail-heading">Professional Experience</h3>
-                <div class="resume-item">
-                  <h4>Assistant Professor</h4>
-                  <h5>2026.03 – Present</h5>
-                  <p><em>School of Business Administration, Dankook University, Yongin, South Korea</em></p>
-                </div>
-                <div class="resume-item">
-                  <h4>Post-doctoral Research Fellow</h4>
-                  <h5>2025.03 – 2026.02</h5>
-                  <p><em>Department of Public Administration, Korea University, Seoul, South Korea</em></p>
-                </div>
-                <div class="resume-item">
-                  <h4>Commissioned &amp; Post-doctoral Researcher</h4>
-                  <h5>2022.03 – 2024.11</h5>
-                  <p><em>Computational Science Research Center, KIST, Seoul, South Korea</em></p>
+
+                <div class="row g-4 person-career-grid">
+                  <div class="col-lg-6">
+                    <h4 class="detail-heading">Education</h4>
+                    <div class="resume-item">
+                      <h4>Ph.D. in Industrial Engineering</h4>
+                      <h5>2018 – 2022</h5>
+                      <h5>Advisor: Prof. Janghyeok Yoon</h5>
+                      <p><em>Department of Industrial Engineering, Konkuk University, Seoul, South Korea</em></p>
+                    </div>
+                    <div class="resume-item">
+                      <h4>Bachelor in Industrial Engineering</h4>
+                      <h5>2014 – 2018</h5>
+                      <h5>Advisor: Prof. Janghyeok Yoon</h5>
+                      <p><em>Department of Industrial Engineering, Konkuk University, Seoul, South Korea</em></p>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <h4 class="detail-heading">Professional Experience</h4>
+                    <div class="resume-item">
+                      <h4>Assistant Professor</h4>
+                      <h5>2026.03 – Present</h5>
+                      <p><em>School of Business Administration, Dankook University, Yongin, South Korea</em></p>
+                    </div>
+                    <div class="resume-item">
+                      <h4>Post-doctoral Research Fellow</h4>
+                      <h5>2025.03 – 2026.02</h5>
+                      <p><em>Department of Public Administration, Korea University, Seoul, South Korea</em></p>
+                    </div>
+                    <div class="resume-item">
+                      <h4>Commissioned &amp; Post-doctoral Researcher</h4>
+                      <h5>2022.03 – 2024.11</h5>
+                      <p><em>Computational Science Research Center, KIST, Seoul, South Korea</em></p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
