@@ -345,13 +345,21 @@
       padding: 120px 0;
       background: #182027;
     }
-
+    
     .stats > img {
-      filter: saturate(0.70) contrast(0.98) brightness(0.52);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(0.78) contrast(0.98) brightness(0.46);
     }
-
+    
     .stats::before {
-      background: linear-gradient(90deg, rgba(14, 20, 25, 0.72), rgba(14, 20, 25, 0.42));
+      background: linear-gradient(
+        90deg,
+        rgba(12, 18, 23, 0.70),
+        rgba(12, 18, 23, 0.48)
+      );
     }
 
     .stats .stats-item span {
@@ -1103,7 +1111,7 @@
     <!-- Stats Section -->
     <section id="stats" class="stats section accent-background">
 
-      <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
+      <img src="assets/img/banff-bg.jpg" alt="Banff mountain landscape" data-aos="fade-in">
 
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
