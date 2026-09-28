@@ -548,7 +548,175 @@
         gap: 10px 18px;
       }
     }
+
+
+    /* Progressive disclosure: concise home sections with optional detail */
+    .summary-grid {
+      border-top: 1px solid #dedfdb;
+    }
+
+    .summary-card {
+      height: 100%;
+      padding: 30px 0 34px;
+      border-bottom: 1px solid #dedfdb;
+    }
+
+    .summary-card .eyebrow {
+      display: block;
+      margin-bottom: 12px;
+      color: #858a8f;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .summary-card h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: #60656a;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .section-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 32px;
+      padding: 10px 0 8px;
+      color: var(--accent-color);
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid #aeb6bd;
+      border-radius: 0;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .section-more:hover,
+    .section-more:focus {
+      color: #111315;
+      border-color: #111315;
+    }
+
+    .section-more .bi {
+      transition: transform 180ms ease;
+    }
+
+    .section-more[aria-expanded="true"] .bi {
+      transform: rotate(180deg);
+    }
+
+    .detail-panel {
+      margin-top: 52px;
+      padding-top: 46px;
+      border-top: 1px solid #d8dad7;
+    }
+
+    .detail-heading {
+      margin: 0 0 28px;
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    .people-pi {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: end;
+    }
+
+    .people-pi .affiliation {
+      color: #666c70;
+      font-size: 14px;
+    }
+
+    .placeholder-text {
+      color: #9a9ea1 !important;
+      font-style: italic;
+    }
+
+    .featured-publication {
+      padding: 28px 0 30px;
+      border-top: 1px solid #e2e3df;
+    }
+
+    .featured-publication:last-child {
+      border-bottom: 1px solid #e2e3df;
+    }
+
+    .featured-publication .journal-year {
+      margin-bottom: 7px;
+      color: #858a8f;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .featured-publication h3 {
+      max-width: 980px;
+      margin: 0 0 8px;
+      font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+      font-weight: 500;
+      line-height: 1.45;
+    }
+
+    .featured-publication p {
+      margin: 0;
+      color: #666c70;
+      font-size: 13px;
+    }
+
+    #research .research-summary-card {
+      min-height: 230px;
+      padding-right: 32px;
+    }
+
+    #research .research-summary-card .bi {
+      display: block;
+      margin-bottom: 30px;
+      color: #7b8287;
+      font-size: 24px;
+    }
+
+    @media (max-width: 767px) {
+      .people-pi {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .detail-panel {
+        margin-top: 38px;
+        padding-top: 34px;
+      }
+    }
+
   </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const publicationDetails = document.getElementById('publicationDetails');
+    if (publicationDetails) {
+      publicationDetails.addEventListener('shown.bs.collapse', function () {
+        const container = document.querySelector('.isotope-container');
+        if (container && window.Isotope) {
+          const instance = Isotope.data(container);
+          if (instance) instance.layout();
+        }
+      });
+    }
+  });
+</script>
+
 </head>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -586,8 +754,8 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#home" class="active">Home<br></a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Research</a></li>
+          <li><a href="#people">People</a></li>
+          <li><a href="#research">Research</a></li>
           <li><a href="#publication">Publications</a></li>
           
         </ul>
@@ -612,241 +780,160 @@
     </section><!-- /Hero Section -->
 
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-    
+    <!-- People Section -->
+    <section id="people" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>People</h2>
+        <p>People behind the lab and its research.</p>
+      </div>
+
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-    
-        <div class="row gy-4">
-    
-          <!-- 반드시 col-md-6이 아니라 col-12 -->
-          <div class="col-12">
-    
-            <div class="about-me">
-    
-              <h4>A<sup>3</sup>M Lab</h4>
-    
-              <div class="row g-5 align-items-start">
-    
-                <!-- Lab introduction -->
-                <div class="col-lg-8">
-    
-                  <p>
-                    A<sup>3</sup>M Lab aims to accelerate digital transformation by developing
-                    AI and ML models for applications in business, public policy, society, and
-                    industry. The lab is led by
-                    <a href="https://scholar.google.com/citations?user=X8CQDfsAAAAJ&hl=en"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                      Prof. Jaewoong Choi
-                    </a>
-                    and is based in the School of Business Administration at Dankook University
-                    in Yongin, South Korea.
-                  </p>
-    
-
-    
-                </div>
-    
-                <!-- Members -->
-                <div class="col-lg-4 lab-members">
-    
-                  <h5>Members</h5>
-    
-                  <ul>
-                    <li>
-                      <span class="member-name"><a href="https://scholar.google.com/citations?user=X8CQDfsAAAAJ&hl=en">Jaewoong Choi</span>
-                      <span class="member-role"> (Principal Investigator) </span>
-                      
-
-                    </li>
-    
-                    <li>
-                      <span class="member-name">Member Name</span>
-                      <span class="member-role">Undergraduate Researcher</span>
-                    </li>
-                  </ul>
-    
-                </div>
-    
+        <div class="row g-4 summary-grid">
+          <div class="col-lg-6">
+            <div class="summary-card people-pi">
+              <div>
+                <span class="eyebrow">Principal Investigator</span>
+                <h3>Jaewoong Choi</h3>
+                <p class="affiliation">Assistant Professor, School of Business Administration<br>Dankook University, Yongin, South Korea</p>
               </div>
-    
+              <a href="https://scholar.google.com/citations?user=X8CQDfsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="preview-link">Google Scholar <i class="bi bi-arrow-up-right"></i></a>
             </div>
-    
           </div>
-    
+
+          <div class="col-lg-3 col-md-6">
+            <div class="summary-card">
+              <span class="eyebrow">Students</span>
+              <h3>Students</h3>
+              <p class="placeholder-text">To be announced.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="summary-card">
+              <span class="eyebrow">Alumni</span>
+              <h3>Alumni</h3>
+              <p class="placeholder-text">To be announced.</p>
+            </div>
+          </div>
         </div>
-    
+
+        <button class="section-more" type="button" data-bs-toggle="collapse" data-bs-target="#peopleDetails" aria-expanded="false" aria-controls="peopleDetails">
+          View details <i class="bi bi-chevron-down"></i>
+        </button>
+
+        <div class="collapse" id="peopleDetails">
+          <div class="detail-panel">
+            <div class="row g-5 align-items-start">
+              <div class="col-lg-7">
+                <h3 class="detail-heading">About the Lab</h3>
+                <p>
+                  A<sup>3</sup>M Lab aims to accelerate digital transformation by developing AI and ML models for applications in business, public policy, society, and industry. The lab is led by Prof. Jaewoong Choi and is based in the School of Business Administration at Dankook University in Yongin, South Korea.
+                </p>
+              </div>
+              <div class="col-lg-5">
+                <h3 class="detail-heading">Principal Investigator</h3>
+                <div class="about-info">
+                  <p><strong>Position</strong>Assistant Professor, Dankook University</p>
+                  <p><strong>Field</strong>AI/ML, digital transformation, technology & innovation management</p>
+                  <p><strong>Research</strong>Business-oriented NLP, technology intelligence, policy informatics, applied machine learning</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-5">
+              <div class="col-lg-6">
+                <h3 class="detail-heading">Education</h3>
+                <div class="resume-item">
+                  <h4>Ph.D. in Industrial Engineering</h4>
+                  <h5>2018 – 2022</h5>
+                  <h5>Advisor: Prof. Janghyeok Yoon</h5>
+                  <p><em>Department of Industrial Engineering, Konkuk University, Seoul, South Korea</em></p>
+                </div>
+                <div class="resume-item">
+                  <h4>Bachelor in Industrial Engineering</h4>
+                  <h5>2014 – 2018</h5>
+                  <h5>Advisor: Prof. Janghyeok Yoon</h5>
+                  <p><em>Department of Industrial Engineering, Konkuk University, Seoul, South Korea</em></p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <h3 class="detail-heading">Professional Experience</h3>
+                <div class="resume-item">
+                  <h4>Assistant Professor</h4>
+                  <h5>2026.03 – Present</h5>
+                  <p><em>School of Business Administration, Dankook University, Yongin, South Korea</em></p>
+                </div>
+                <div class="resume-item">
+                  <h4>Post-doctoral Research Fellow</h4>
+                  <h5>2025.03 – 2026.02</h5>
+                  <p><em>Department of Public Administration, Korea University, Seoul, South Korea</em></p>
+                </div>
+                <div class="resume-item">
+                  <h4>Commissioned &amp; Post-doctoral Researcher</h4>
+                  <h5>2022.03 – 2024.11</h5>
+                  <p><em>Computational Science Research Center, KIST, Seoul, South Korea</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    
-    </section>
+    </section><!-- /People Section -->
 
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
+    <!-- Research Section -->
+    <section id="research" class="services section">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        
-      </div><!-- End Section Title -->
+        <h2>Research</h2>
+        <p>AI and machine learning for digital transformation and societal change.</p>
+      </div>
 
       <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Ph.D in Industrial Engineering</h4>
-              <h5>2018 - 2022</h5>
-              <h5>Advisor: Prof. Janghyeok Yoon</h5>
-              <h5>Lab: Business Intelligence & Data Analytics Laboratory</h5>
-              <h5>Thesis: A knowledge profiling approach to technology opportunity mining for R&D planning</h5>
-              <p><em>Department of Industrial Engineering, Konkuk University, Seoul, South Korea</em></p>
-              <p>Graduated Summa Cum Laude with the highest GPA and research performance among the 2022 graduates of Konkuk University </p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Bachelor in Industrial Engineering</h4>
-              <h5>2014 - 2018</h5>
-              <h5>Advisor: Prof. Janghyeok Yoon</h5>
-              <p><em>Department of Industrial Engineering, Konkuk University, Seoul, South Korea</em></p>
-              
-            </div><!-- Edn Resume Item -->
-
+        <div class="row g-4 summary-grid">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="summary-card research-summary-card">
+              <i class="bi bi-diagram-3"></i>
+              <span class="eyebrow">01</span>
+              <h3>AI for Business &amp; Innovation</h3>
+              <p>AI/ML methods for technology intelligence, opportunity discovery, forecasting, valuation, and managerial decision support.</p>
+            </div>
           </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Assistant Professor</h4>
-              <h5>2026.03 - Present </h5>
-              <p><em>School of Business Administration, Dankook University, Yongin, South Korea </em></p>
-
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item">
-              <h4>Post-doctoral Research Fellow</h4>
-              <h5>2025.03 - 2026. 02 </h5>
-              <h5>Advisor: Prof. Changyong Lee</h5>
-              <p><em>Department of Public Administration, Korea University, Seoul, South Korea </em></p>
-
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item">
-              <h4>Commisioned & Post-doctoral Researcher</h4>
-              <h5>2022.03 - 2024. 11 </h5>
-              <p><em>Computational Science Research Center, KIST, Seoul, South Korea</em></p>
-
-
-
-
-
-
-
-
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="summary-card research-summary-card">
+              <i class="bi bi-cpu"></i>
+              <span class="eyebrow">02</span>
+              <h3>Language &amp; Knowledge Intelligence</h3>
+              <p>NLP, language models, representation learning, and knowledge structures for extracting and integrating complex textual knowledge.</p>
+            </div>
           </div>
-
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="summary-card research-summary-card">
+              <i class="bi bi-globe2"></i>
+              <span class="eyebrow">03</span>
+              <h3>Digital Transformation &amp; Society</h3>
+              <p>Data-driven analysis of how AI and digital technologies reshape firms, public policy, innovation systems, and society.</p>
+            </div>
+          </div>
         </div>
 
-      </div>
+        <button class="section-more" type="button" data-bs-toggle="collapse" data-bs-target="#researchDetails" aria-expanded="false" aria-controls="researchDetails">
+          View research areas <i class="bi bi-chevron-down"></i>
+        </button>
 
-    </section><!-- /Resume Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Research Interests</h2>
-        <p>are as follows, but not limited to</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <div class="icon">
-                <i class="bi bi-activity"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Management of Technology</h3>
-              </a>
-              <p>Providing technology intelligence such as technology opportunity discovery, technology valuation and technology forecasting from patent data</p>
+        <div class="collapse" id="researchDetails">
+          <div class="detail-panel">
+            <h3 class="detail-heading">Research Areas</h3>
+            <div class="row gy-4">
+              <div class="col-lg-4 col-md-6"><div class="service-item position-relative"><div class="icon"><i class="bi bi-activity"></i></div><h3>Management of Technology</h3><p>Technology opportunity discovery, technology valuation, forecasting, and technology intelligence from patent and science data.</p></div></div>
+              <div class="col-lg-4 col-md-6"><div class="service-item position-relative"><div class="icon"><i class="bi bi-broadcast"></i></div><h3>Science &amp; Technology Innovation Policy</h3><p>AI-enabled analysis of science, technology, innovation systems, and policy transformation.</p></div></div>
+              <div class="col-lg-4 col-md-6"><div class="service-item position-relative"><div class="icon"><i class="bi bi-easel"></i></div><h3>Business Intelligence</h3><p>Managerial insights from social media, trademarks, online communities, product reviews, and other digital traces.</p></div></div>
+              <div class="col-lg-4 col-md-6"><div class="service-item position-relative"><div class="icon"><i class="bi bi-bounding-box-circles"></i></div><h3>Applied Machine Learning</h3><p>Interpretable and task-oriented ML for classification, regression, representation learning, and decision support.</p></div></div>
+              <div class="col-lg-4 col-md-6"><div class="service-item position-relative"><div class="icon"><i class="bi bi-calendar4-week"></i></div><h3>Natural Language Processing</h3><p>Information extraction, text classification, semantic representation, and knowledge graph construction.</p></div></div>
+              <div class="col-lg-4 col-md-6"><div class="service-item position-relative"><div class="icon"><i class="bi bi-chat-square-text"></i></div><h3>Large Language Models</h3><p>LLM-based knowledge extraction, cross-domain knowledge alignment, and agentic systems for organizational and policy applications.</p></div></div>
             </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-broadcast"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Science and Technology Innovation Policy</h3>
-              </a>
-              <p>Providing AI transformation pathways for science and technology innovation, focusing on energy and environmental science fields</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-easel"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Business Intelligence</h3>
-              </a>
-              <p>Providing business managerial insights from social media, trademarks, online communities, online product reviews and so on</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-bounding-box-circles"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Applied Machine Learning</h3>
-              </a>
-              <p>Applications of ML models for classification, regression, similarity learning and so on</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Natural Language Processing</h3>
-              </a>
-              <p>Application of NLP for information extraction, text classification and knowledge graphs</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-chat-square-text"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Large Language Models</h3>
-              </a>
-              <p>Developing LLM-based information extraction toolkits and agentic environment for policy simulation</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
+          </div>
         </div>
-
       </div>
-
-    </section><!-- /Services Section -->
+    </section><!-- /Research Section -->
 
     <!-- Stats Section -->
     <section id="stats" class="stats section accent-background">
@@ -894,16 +981,41 @@
 
     <!-- Publication Section -->
     <section id="publication" class="publication section">
-      
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Publications</h2>
-        
-
-      </div><!-- End Section Title -->
+        <p>Selected publications. Expand the full list for all journal articles, works in progress, and intellectual property.</p>
+      </div>
 
       <div class="container">
+        <div class="featured-publications" data-aos="fade-up" data-aos-delay="100">
+          <article class="featured-publication">
+            <div class="journal-year">Applied Soft Computing · 2026</div>
+            <h3>Leveraging cross-domain knowledge alignment for AI transformation: A contrastive learning approach using problem-solution pairs from patents</h3>
+            <p><b>Jaewoong Choi</b>, Juram Kim*, Changyong Lee*</p>
+          </article>
+          <article class="featured-publication">
+            <div class="journal-year">Computers &amp; Industrial Engineering · 2025</div>
+            <h3>Early screening of potential breakthrough technologies with enhanced interpretability: A patent-specific hierarchical attention network model</h3>
+            <p><b>Jaewoong Choi</b>, Janghyeok Yoon, Changyong Lee*</p>
+          </article>
+          <article class="featured-publication">
+            <div class="journal-year">Journal of Innovation &amp; Knowledge · 2025</div>
+            <h3>NEON as a navigator of energy open innovation ecosystems</h3>
+            <p>Jaemin Chung, Janghyeok Yoon*, <b>Jaewoong Choi*</b></p>
+          </article>
+          <article class="featured-publication">
+            <div class="journal-year">Technological Forecasting &amp; Social Change · 2023</div>
+            <h3>Exploring a technology ecology for technology opportunity discovery: A link prediction approach using heterogeneous knowledge graphs</h3>
+            <p><b>Jaewoong Choi</b>, Changyong Lee, Janghyeok Yoon*</p>
+          </article>
+        </div>
 
+        <button class="section-more" type="button" data-bs-toggle="collapse" data-bs-target="#publicationDetails" aria-expanded="false" aria-controls="publicationDetails">
+          View all publications <i class="bi bi-chevron-down"></i>
+        </button>
+
+        <div class="collapse" id="publicationDetails">
+          <div class="detail-panel">
         <!-- Isotope Layout Container -->
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
@@ -1746,6 +1858,8 @@
           </div><!-- End isotope-container -->
 
         </div><!-- End isotope-layout -->
+          </div><!-- End detail-panel -->
+        </div><!-- End publicationDetails -->
 
       </div><!-- End Container -->
 
