@@ -670,6 +670,27 @@
       line-height: 1.45;
     }
 
+    .featured-publication h3 a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 180ms ease;
+    }
+
+    .featured-publication h3 a:hover {
+      color: var(--accent-color);
+    }
+
+    .journal-rank {
+      margin-left: 8px;
+      padding-left: 8px;
+      border-left: 1px solid #cfd2d3;
+      color: #7a8085;
+      font-size: 0.9em;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: none;
+    }
+
     .featured-publication p {
       margin: 0;
       color: #666c70;
@@ -752,13 +773,16 @@
     .person-photo-wrap {
       width: 100%;
       max-width: 260px;
+      aspect-ratio: 4 / 5;
       background: #eceeeb;
       overflow: hidden;
     }
-    
+
     .person-photo {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
       display: block;
     }
 
@@ -926,7 +950,7 @@
 
       <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
         <h2>Welcome to AI-ON Lab.</h2>
-        <p><span class="typed" data-typed-items="Artificial Intelligence for Organizations & iNnovation"></span></p>
+        <p><span class="typed" data-typed-items="AI for Digital Transformation and Societal Change"></span></p>
       </div>
 
     </section><!-- /Hero Section -->
@@ -978,7 +1002,7 @@
             <div class="row g-5 align-items-start">
               <div class="col-lg-3 col-md-4">
                 <div class="person-photo-wrap">
-                  <img src="assets/img/prof-imge.jpg" alt="Jaewoong Choi" class="person-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <img src="assets/img/jaewoong-choi.jpg" alt="Jaewoong Choi" class="person-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                   <div class="person-photo-placeholder" style="display:none;">Profile photo</div>
                 </div>
               </div>
@@ -988,7 +1012,8 @@
                 <p class="person-detail-role">Assistant Professor · School of Business Administration, Dankook University</p>
 
                 <div class="person-meta">
-
+                  <p><strong>Research</strong>AI/ML, digital transformation, technology &amp; innovation management</p>
+                  <p><strong>Interests</strong>Business-oriented NLP, technology intelligence, policy informatics, applied machine learning</p>
                   <p><strong>Profile</strong><a href="https://scholar.google.com/citations?user=X8CQDfsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <i class="bi bi-arrow-up-right"></i></a></p>
                 </div>
 
@@ -996,12 +1021,9 @@
                   <div class="col-lg-6">
                     <h4 class="detail-heading">Education</h4>
                     <div class="resume-item">
-                      <h4>
-                        Ph.D. in Industrial Engineering
-                        <em style="font-size: 0.78em; font-weight: 400; color: #777; margin-left: 8px;">Summa Cum Laude</em>
-                      </h4>
+                      <h4>Ph.D. in Industrial Engineering</h4>
                       <h5>2018 – 2022</h5>
-                      <h5>Advisor: Prof. Janghyeok Yoon, Business Intelligence & Data Analytics Lab</h5>
+                      <h5>Advisor: Prof. Janghyeok Yoon</h5>
                       <p><em>Department of Industrial Engineering, Konkuk University, Seoul, South Korea</em></p>
                     </div>
                     <div class="resume-item">
@@ -1022,13 +1044,12 @@
                     <div class="resume-item">
                       <h4>Post-doctoral Research Fellow</h4>
                       <h5>2025.03 – 2026.02</h5>
-                      <h5>Advisor: Prof. Changyong Lee, Policy Informatic Lab</h5>
                       <p><em>Department of Public Administration, Korea University, Seoul, South Korea</em></p>
                     </div>
                     <div class="resume-item">
                       <h4>Commissioned &amp; Post-doctoral Researcher</h4>
                       <h5>2022.03 – 2024.11</h5>
-                      <p><em>Computational Science Research Center, Korea Insititute of Science and Technology, Seoul, South Korea</em></p>
+                      <p><em>Computational Science Research Center, KIST, Seoul, South Korea</em></p>
                     </div>
                   </div>
                 </div>
@@ -1049,7 +1070,7 @@
       <div class="container">
         <div class="research-intro" data-aos="fade-up" data-aos-delay="100">
           <span class="eyebrow">About the Lab</span>
-          <h3>AI for Organizations &amp; iNnovation </h3>
+          <h3>AI for Digital Transformation &amp; Societal Change</h3>
           <p>
             AI-ON Lab investigates how artificial intelligence and machine learning can support
             digital transformation and help explain its broader organizational, technological,
@@ -1132,23 +1153,54 @@
       <div class="container">
         <div class="featured-publications" data-aos="fade-up" data-aos-delay="100">
           <article class="featured-publication">
-            <div class="journal-year">Applied Soft Computing · 2026</div>
-            <h3>Leveraging cross-domain knowledge alignment for AI transformation: A contrastive learning approach using problem-solution pairs from patents</h3>
+            <div class="journal-year">
+              Applied Soft Computing · 2026
+              <span class="journal-rank">JCR Top 13.51%</span>
+            </div>
+            <h3>
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S1568494626011944" target="_blank" rel="noopener noreferrer">
+                Leveraging cross-domain knowledge alignment for AI transformation: A contrastive learning approach using problem-solution pairs from patents
+              </a>
+            </h3>
             <p><b>Jaewoong Choi</b>, Juram Kim*, Changyong Lee*</p>
           </article>
+
           <article class="featured-publication">
-            <div class="journal-year">Computers &amp; Industrial Engineering · 2025</div>
-            <h3>Early screening of potential breakthrough technologies with enhanced interpretability: A patent-specific hierarchical attention network model</h3>
+            <div class="journal-year">
+              Computers &amp; Industrial Engineering · 2025
+              <span class="journal-rank">JCR Top 15%</span>
+            </div>
+            <h3>
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0360835225001809" target="_blank" rel="noopener noreferrer">
+                Early screening of potential breakthrough technologies with enhanced interpretability: A patent-specific hierarchical attention network model
+              </a>
+            </h3>
             <p><b>Jaewoong Choi</b>, Janghyeok Yoon, Changyong Lee*</p>
           </article>
+
           <article class="featured-publication">
-            <div class="journal-year">Journal of Innovation &amp; Knowledge · 2025</div>
-            <h3>NEON as a navigator of energy open innovation ecosystems</h3>
+            <div class="journal-year">
+              Journal of Innovation &amp; Knowledge · 2025
+              <span class="journal-rank">JCR Top 0.87%</span>
+            </div>
+            <h3>
+              <a href="https://www.sciencedirect.com/science/article/pii/S2444569X25001234" target="_blank" rel="noopener noreferrer">
+                NEON as a navigator of energy open innovation ecosystems
+              </a>
+            </h3>
             <p>Jaemin Chung, Janghyeok Yoon*, <b>Jaewoong Choi*</b></p>
           </article>
+
           <article class="featured-publication">
-            <div class="journal-year">Technological Forecasting &amp; Social Change · 2023</div>
-            <h3>Exploring a technology ecology for technology opportunity discovery: A link prediction approach using heterogeneous knowledge graphs</h3>
+            <div class="journal-year">
+              Technological Forecasting &amp; Social Change · 2023
+              <span class="journal-rank">JCR Top 2%</span>
+            </div>
+            <h3>
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0040162522006825" target="_blank" rel="noopener noreferrer">
+                Exploring a technology ecology for technology opportunity discovery: A link prediction approach using heterogeneous knowledge graphs
+              </a>
+            </h3>
             <p><b>Jaewoong Choi</b>, Changyong Lee, Janghyeok Yoon*</p>
           </article>
         </div>
