@@ -881,6 +881,46 @@
       }
     }
 
+
+    /* People: reveal details only on demand */
+    #people .summary-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    #people .person-card-actions {
+      margin-top: 24px;
+    }
+
+    #people .people-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    #people .people-list-item {
+      padding: 20px 0;
+      border-top: 1px solid #e2e3df;
+    }
+
+    #people .people-list-item:last-child {
+      border-bottom: 1px solid #e2e3df;
+    }
+
+    #people .people-list-item h4 {
+      margin: 0 0 5px;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    #people .people-list-item p {
+      margin: 0;
+      color: #666c70;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
   </style>
 
 <script>
@@ -965,49 +1005,80 @@
     <section id="people" class="about section">
       <div class="container section-title" data-aos="fade-up">
         <h2>People</h2>
-        <p>People behind the lab and its research.</p>
+        <p>People behind the lab</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row g-4 summary-grid">
-          <div class="col-lg-6">
-            <div class="summary-card people-pi">
-              <div>
-                <span class="eyebrow">Principal Investigator</span>
-                <h3>Jaewoong Choi</h3>
-                <p class="affiliation">Assistant Professor, School of Business Administration<br>Dankook University, Yongin, South Korea</p>
-                <div class="person-card-actions">
-                  <button class="section-more" type="button" data-bs-toggle="collapse" data-bs-target="#jaewoongDetails" aria-expanded="false" aria-controls="jaewoongDetails">
-                    View details <i class="bi bi-chevron-down"></i>
-                  </button>
-                </div>
+
+          <!-- Principal Investigator -->
+          <div class="col-lg-4 col-md-6">
+            <div class="summary-card">
+              <span class="eyebrow">Principal Investigator</span>
+              <h3>Jaewoong Choi</h3>
+
+              <div class="person-card-actions">
+                <button class="section-more"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#jaewoongDetails"
+                        aria-expanded="false"
+                        aria-controls="jaewoongDetails">
+                  View details <i class="bi bi-chevron-down"></i>
+                </button>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <!-- Students -->
+          <div class="col-lg-4 col-md-6">
             <div class="summary-card">
               <span class="eyebrow">Students</span>
               <h3>Students</h3>
-              <p class="placeholder-text">To be announced.</p>
+
+              <div class="person-card-actions">
+                <button class="section-more"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#studentDetails"
+                        aria-expanded="false"
+                        aria-controls="studentDetails">
+                  View details <i class="bi bi-chevron-down"></i>
+                </button>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <!-- Alumni -->
+          <div class="col-lg-4 col-md-6">
             <div class="summary-card">
               <span class="eyebrow">Alumni</span>
               <h3>Alumni</h3>
-              <p class="placeholder-text">To be announced.</p>
+
+              <div class="person-card-actions">
+                <button class="section-more"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#alumniDetails"
+                        aria-expanded="false"
+                        aria-controls="alumniDetails">
+                  View details <i class="bi bi-chevron-down"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
+        <!-- PI Details -->
         <div class="collapse" id="jaewoongDetails">
           <div class="person-detail">
             <div class="row g-5 align-items-start">
               <div class="col-lg-3 col-md-4">
                 <div class="person-photo-wrap">
-                  <img src="assets/img/prof-imge.jpg" alt="Jaewoong Choi" class="person-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <img src="assets/img/prof-imge.jpg"
+                       alt="Jaewoong Choi"
+                       class="person-photo"
+                       onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                   <div class="person-photo-placeholder" style="display:none;">Profile photo</div>
                 </div>
               </div>
@@ -1018,59 +1089,65 @@
 
                 <div class="person-meta">
                   <p><strong>E-mail</strong>jaewoongchoi@dankook.ac.kr</p>
-                 <p class="profile-links">
-                  <strong>Profile</strong>
-                
-                  <a href="https://scholar.google.com/citations?user=X8CQDfsAAAAJ&hl=en"
-                     target="_blank" rel="noopener noreferrer">
-                    Google Scholar <i class="bi bi-arrow-up-right"></i>
-                  </a>
-                
-                  <a href="https://www.researchgate.net/profile/Jaewoong-Choi-2?ev=hdr_xprf"
-                     target="_blank" rel="noopener noreferrer">
-                    ResearchGate <i class="bi bi-arrow-up-right"></i>
-                  </a>
-                
-                  <a href="https://www.linkedin.com/in/jaewoong-choi-9753661b5/"
-                     target="_blank" rel="noopener noreferrer">
-                    LinkedIn <i class="bi bi-arrow-up-right"></i>
-                  </a>
-                </p>
+
+                  <p class="profile-links">
+                    <strong>Profile</strong>
+
+                    <a href="https://scholar.google.com/citations?user=X8CQDfsAAAAJ&hl=en"
+                       target="_blank" rel="noopener noreferrer">
+                      Google Scholar <i class="bi bi-arrow-up-right"></i>
+                    </a>
+
+                    <a href="https://www.researchgate.net/profile/Jaewoong-Choi-2?ev=hdr_xprf"
+                       target="_blank" rel="noopener noreferrer">
+                      ResearchGate <i class="bi bi-arrow-up-right"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/jaewoong-choi-9753661b5/"
+                       target="_blank" rel="noopener noreferrer">
+                      LinkedIn <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                  </p>
                 </div>
 
                 <div class="row g-4 person-career-grid">
                   <div class="col-lg-6">
                     <h4 class="detail-heading">Education</h4>
+
                     <div class="resume-item">
-                    <h4>
-                      Ph.D. in Industrial Engineering
-                      <em style="font-size: 0.78em; font-weight: 400; color: #777; margin-left: 8px;">Summa Cum Laude</em>
-                    </h4>
+                      <h4>
+                        Ph.D. in Industrial Engineering
+                        <em style="font-size: 0.78em; font-weight: 400; color: #777; margin-left: 8px;">Summa Cum Laude</em>
+                      </h4>
                       <h5>2018 – 2022</h5>
-                      <h5>Advisor: Prof. Janghyeok Yoon (Busienss Intelligence & Data Analytics Lab) </h5>
+                      <h5>Advisor: Prof. Janghyeok Yoon (Business Intelligence &amp; Data Analytics Lab)</h5>
                       <p><em>Department of Industrial Engineering, Konkuk University, Seoul, South Korea</em></p>
                     </div>
+
                     <div class="resume-item">
                       <h4>Bachelor in Industrial Engineering</h4>
                       <h5>2014 – 2018</h5>
-                      <h5>Advisor: Prof. Janghyeok Yoon </h5>
+                      <h5>Advisor: Prof. Janghyeok Yoon</h5>
                       <p><em>Department of Industrial Engineering, Konkuk University, Seoul, South Korea</em></p>
                     </div>
                   </div>
 
                   <div class="col-lg-6">
                     <h4 class="detail-heading">Professional Experience</h4>
+
                     <div class="resume-item">
                       <h4>Assistant Professor</h4>
                       <h5>2026.03 – Present</h5>
                       <p><em>School of Business Administration, Dankook University, Yongin, South Korea</em></p>
                     </div>
+
                     <div class="resume-item">
                       <h4>Post-doctoral Research Fellow</h4>
                       <h5>2025.03 – 2026.02</h5>
-                      <h5>Advisor: Prof. Changyong Lee (Policy Informatics Lab) </h5>
+                      <h5>Advisor: Prof. Changyong Lee (Policy Informatics Lab)</h5>
                       <p><em>Department of Public Administration, Korea University, Seoul, South Korea</em></p>
                     </div>
+
                     <div class="resume-item">
                       <h4>Commissioned &amp; Post-doctoral Researcher</h4>
                       <h5>2022.03 – 2024.11</h5>
@@ -1082,6 +1159,45 @@
             </div>
           </div>
         </div>
+
+        <!-- Student List -->
+        <div class="collapse" id="studentDetails">
+          <div class="detail-panel">
+            <h3 class="detail-heading">Students</h3>
+
+            <ul class="people-list">
+              <!-- Add one <li> block per student.
+              <li class="people-list-item">
+                <h4>Student Name</h4>
+                <p>Undergraduate Researcher · Research interests</p>
+              </li>
+              -->
+              <li class="people-list-item">
+                <p class="placeholder-text">To be announced.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Alumni List -->
+        <div class="collapse" id="alumniDetails">
+          <div class="detail-panel">
+            <h3 class="detail-heading">Alumni</h3>
+
+            <ul class="people-list">
+              <!-- Add one <li> block per alumnus/alumna.
+              <li class="people-list-item">
+                <h4>Alumni Name</h4>
+                <p>Former role · Current affiliation</p>
+              </li>
+              -->
+              <li class="people-list-item">
+                <p class="placeholder-text">To be announced.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </section><!-- /People Section -->
 
@@ -1292,7 +1408,47 @@
                 <div class="row align-items-start">
                   <!-- 제목, 저자, 설명, 링크만 표시 -->
                   <div class="col-12">
-                    <h4 class="title">From grievance persistence to media amplification: Monitoring public conflict escalation through citizen complaints and news coverage </h4>
+                    <h4 class="title">TBA - attention </h4>
+                    <p class="author"> <b>Jaewoong Choi</b>, Changyong Lee*</p>
+                    <p class="date">2026+</p>
+                    <p class="description">In Preparation </p>
+                    <div class="link">
+                      <a href="" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            
+            <!-- Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-tba" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">TBA - regression </h4>
+                    <p class="author"> <b>Jaewoong Choi</b>, Changyong Lee*</p>
+                    <p class="date">2026+</p>
+                    <p class="description">In Preparation </p>
+                    <div class="link">
+                      <a href="" title="Journal" class="preview-link" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Publication Item -->
+            
+            <!-- Publication Item -->
+            <div class="col-lg-12 publication-item isotope-item filter-tba" style="background:#fff; padding:20px; margin-bottom:30px; border-radius:8px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+              <div class="publication-wrap">
+                <div class="row align-items-start">
+                  <!-- 제목, 저자, 설명, 링크만 표시 -->
+                  <div class="col-12">
+                    <h4 class="title">TBA - complaints </h4>
                     <p class="author"> Jungwon Park, <b>Jaewoong Choi*</b>, Changyong Lee*</p>
                     <p class="date">2026+</p>
                     <p class="description">In Preparation </p>
