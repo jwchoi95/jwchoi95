@@ -922,6 +922,102 @@
       line-height: 1.65;
     }
 
+
+    /* Reduce excess whitespace above Student / Alumni lists */
+    #studentDetails .detail-panel,
+    #alumniDetails .detail-panel {
+      margin-top: 0;
+      padding-top: 20px;
+    }
+
+    /* Research section layout */
+    #research .research-main {
+      max-width: 900px;
+    }
+
+    #research .research-main > p {
+      max-width: 820px;
+      margin: 0;
+      color: #555b60;
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    #research .research-main .section-more {
+      margin-top: 24px;
+    }
+
+    #research .collaborator-block {
+      max-width: 900px;
+      margin-top: 58px;
+      padding-top: 34px;
+      border-top: 1px solid #d8dad7;
+    }
+
+    #research .collaborator-block .eyebrow {
+      display: block;
+      margin-bottom: 10px;
+      color: #858a8f;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #research .collaborator-block > p {
+      max-width: 820px;
+      margin: 0;
+      color: #555b60;
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    .collaborator-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .collaborator-item {
+      display: grid;
+      grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.8fr);
+      gap: 26px;
+      padding: 18px 0;
+      border-top: 1px solid #e2e3df;
+    }
+
+    .collaborator-item:last-child {
+      border-bottom: 1px solid #e2e3df;
+    }
+
+    .collaborator-institution {
+      color: #858a8f;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .collaborator-names {
+      color: #34383c;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* Altmetric badge spacing */
+    .featured-publication .altmetric-embed {
+      display: inline-block;
+      margin-top: 14px;
+      min-height: 64px;
+    }
+
+    @media (max-width: 767px) {
+      .collaborator-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+
   </style>
 
 <script>
@@ -1454,72 +1550,151 @@
 
     <!-- Research Section -->
     <section id="research" class="services section">
+
       <div class="container section-title" data-aos="fade-up">
         <h2>Research</h2>
-        <h3>AI for Organizations &amp; iNnovation </h3>
-        <p>
-          Our research focuses on AI- and machine learning-driven digital transformation across business, innovation, public policy, and society.
-        </p>
+        <h3>AI for Organizations &amp; iNnovation</h3>
       </div>
-      <div class="container">
-        <div class="research-intro" data-aos="fade-up" data-aos-delay="100">
-          <span class="eyebrow">Collaborator</span>
 
-          
+      <div class="container">
+
+        <!-- Research overview -->
+        <div class="research-main" data-aos="fade-up" data-aos-delay="100">
           <p>
-            We work with research collaborators across Korea University, Konkuk University, Sogang University, Harvard University, Lawrence Livermore National Laboratory, KISTI, KIST, and other institutions.
+            Our research focuses on AI- and machine learning-driven digital transformation across
+            business, innovation, public policy, and society.
           </p>
+
+          <button
+            class="section-more"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#researchDetails"
+            aria-expanded="false"
+            aria-controls="researchDetails">
+            View research areas <i class="bi bi-chevron-down"></i>
+          </button>
         </div>
 
-        <button class="section-more" type="button" data-bs-toggle="collapse" data-bs-target="#researchDetails" aria-expanded="false" aria-controls="researchDetails">
-          View research areas <i class="bi bi-chevron-down"></i>
-        </button>
-
-
+        <!-- Research Areas -->
         <div class="collapse" id="researchDetails">
           <div class="detail-panel">
-        
+
             <h3 class="detail-heading">Research Themes</h3>
-        
-            <div class="row gy-4 mb-5">
-        
+
+            <div class="row gy-4 mb-2">
+
               <div class="col-lg-4 col-md-6">
                 <div class="service-item position-relative">
-                  <h3>AI & Digital Transformation</h3>
+                  <h3>AI &amp; Digital Transformation</h3>
                   <p>
                     AI- and ML-driven transformation of organizations, business models,
                     innovation processes, and public-sector systems.
                   </p>
                 </div>
               </div>
-        
+
               <div class="col-lg-4 col-md-6">
                 <div class="service-item position-relative">
-                  <h3>Technology & Innovation Intelligence</h3>
+                  <h3>Technology &amp; Innovation Intelligence</h3>
                   <p>
                     Data-driven analysis of technological change, emerging opportunities,
                     knowledge recombination, and innovation ecosystems.
                   </p>
                 </div>
               </div>
-        
+
               <div class="col-lg-4 col-md-6">
                 <div class="service-item position-relative">
-                  <h3>Language & Knowledge Intelligence</h3>
+                  <h3>Language &amp; Knowledge Intelligence</h3>
                   <p>
                     NLP, large language models, representation learning, and knowledge
                     extraction for business, policy, and scientific applications.
                   </p>
                 </div>
               </div>
-        
+
             </div>
-        
-
-
-        
           </div>
         </div>
+
+        <!-- Collaborators -->
+        <div class="collaborator-block" data-aos="fade-up" data-aos-delay="150">
+          <span class="eyebrow">Collaborators</span>
+
+          <p>
+            We work with research collaborators across Korea University, Konkuk University,
+            Sogang University, Harvard University, Lawrence Livermore National Laboratory,
+            KISTI, KIST, and other institutions.
+          </p>
+
+          <button
+            class="section-more"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collaboratorDetails"
+            aria-expanded="false"
+            aria-controls="collaboratorDetails">
+            View details <i class="bi bi-chevron-down"></i>
+          </button>
+        </div>
+
+        <div class="collapse" id="collaboratorDetails">
+          <div class="detail-panel">
+
+            <h3 class="detail-heading">Selected Research Collaborators</h3>
+
+            <ul class="collaborator-list">
+
+              <li class="collaborator-item">
+                <div class="collaborator-institution">Korea University</div>
+                <div class="collaborator-names">Prof. Changyong Lee</div>
+              </li>
+
+              <li class="collaborator-item">
+                <div class="collaborator-institution">Konkuk University</div>
+                <div class="collaborator-names">Prof. Janghyeok Yoon</div>
+              </li>
+
+              <li class="collaborator-item">
+                <div class="collaborator-institution">Sogang University</div>
+                <div class="collaborator-names">Prof. Juram Kim</div>
+              </li>
+
+              <li class="collaborator-item">
+                <div class="collaborator-institution">Lawrence Livermore National Laboratory</div>
+                <div class="collaborator-names">
+                  Dr. Anna Hiszpanski · Dr. David Buttler · Olivia Miano
+                </div>
+              </li>
+
+              <li class="collaborator-item">
+                <div class="collaborator-institution">KIST</div>
+                <div class="collaborator-names">
+                  Dr. Byungju Lee · Dr. Sang Soo Han · Dr. Donghun Kim
+                </div>
+              </li>
+
+              <li class="collaborator-item">
+                <div class="collaborator-institution">KISTI</div>
+                <div class="collaborator-names">
+                  Jaemin Chung
+                </div>
+              </li>
+
+              <!-- Add Harvard University collaborator(s) here when ready.
+              <li class="collaborator-item">
+                <div class="collaborator-institution">Harvard University</div>
+                <div class="collaborator-names">Name</div>
+              </li>
+              -->
+
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
 
     </section><!-- /Research Section -->
 
@@ -1596,6 +1771,8 @@
           
             <div class="altmetric-embed"
                  data-badge-type="donut"
+                 data-badge-popover="right"
+                 data-link-target="_blank"
                  data-doi="10.1016/j.asoc.2026.115746">
             </div>
           </article>
@@ -1613,6 +1790,8 @@
             <p><b>Jaewoong Choi</b>, Janghyeok Yoon, Changyong Lee*</p>
             <div class="altmetric-embed"
                  data-badge-type="donut"
+                 data-badge-popover="right"
+                 data-link-target="_blank"
                  data-doi="10.1016/j.cie.2025.111034">
             </div>
           </article>
@@ -1630,6 +1809,8 @@
             <p>Jaemin Chung, Janghyeok Yoon*, <b>Jaewoong Choi*</b></p>
             <div class="altmetric-embed"
                  data-badge-type="donut"
+                 data-badge-popover="right"
+                 data-link-target="_blank"
                  data-doi="10.1016/j.jik.2025.100778">
             </div>
           </article>
@@ -1647,6 +1828,8 @@
             <p><b>Jaewoong Choi</b>, Changyong Lee, Janghyeok Yoon*</p>
             <div class="altmetric-embed"
                  data-badge-type="donut"
+                 data-badge-popover="right"
+                 data-link-target="_blank"
                  data-doi="10.1016/j.techfore.2022.122161">
             </div>
           </article>
@@ -2571,11 +2754,10 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
-  <!-- Altmetric -->
-  <script async
-          src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js">
-  </script>
+
+  <!-- Altmetric badges -->
+  <script type="text/javascript" src="https://embed.altmetric.com/assets/embed.js"></script>
+
 </body>
 
 </html>
